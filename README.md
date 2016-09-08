@@ -48,9 +48,9 @@ $ pip install -r requirements.txt
 
 ## Deployment
 
-#Static Files
+###Static Files
 
-#Step 1: Adding Files
+####Step 1: Adding Files
 Place the static files in their respective folders under the app/static/files directory
 Every subfolder under files is considered a category 
 Blitz-DB will save each folder as a category object and each file as a file object
@@ -63,7 +63,7 @@ class File(Document):
 class Category(Document):
     pass
 ```
-#Step 2: Generating the DB
+####Step 2: Generating the DB
 Check if a directory called file_db exists, this is is the file based database.
 If it does NOT exist run the command below to generate it
 
@@ -71,10 +71,10 @@ If it does NOT exist run the command below to generate it
 (venv)$ ./filedb.py
 
 ```
-#NOTE for now there is no auto mated way of updating the db after adding static files to the appstatic/files dir, the best solution is to delete the file_db directory and regenerate it by running the command above
+######NOTE for now there is no auto mated way of updating the db after adding static files to the appstatic/files dir, the best solution is to delete the file_db directory and regenerate it by running the command above
 
 
-#Step 3 testing
+####Step 3 testing
 To test start the server by running and the navigate to localhost:5000 on your browser
 
 ```
@@ -88,7 +88,7 @@ localhost:5000/admin/settings - incomplete - meant to contain
         - function to start the server 
         -function to generate a static website 
 
-#Step 4: Generate Static Website aka Freeze
+####Step 4: Generate Static Website aka Freeze
 To get the static website run 
 ```
 (venv)$ ./freeze.py
