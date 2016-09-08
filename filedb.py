@@ -1,3 +1,4 @@
+#!venv/bin/python
 from blitzdb import FileBackend
 import os
 from pogba import DirBrowser
