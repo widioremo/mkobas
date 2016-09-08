@@ -38,62 +38,72 @@ $ deactivate
 
 In the virtual environment install all dependancies with :
 
----
+```
+
 #run this in the cmd/terminal
+
 $ pip install -r requirements.txt
----
 
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+#Static Files
+
+#Step 1: Adding Files
+Place the static files in their respective folders under the app/static/files directory
+Every subfolder under files is considered a category 
+Blitz-DB will save each folder as a category object and each file as a file object
+
+```
+#in pogba.py:
+class File(Document):
+    pass
+
+class Category(Document):
+    pass
+```
+#Step 2: Generating the DB
+Check if a directory called file_db exists, this is is the file based database.
+If it does NOT exist run the command below to generate it
+
+```
+(venv)$ ./filedb.py
+
+```
+#NOTE for now there is no auto mated way of updating the db after adding static files to the appstatic/files dir, the best solution is to delete the file_db directory and regenerate it by running the command above
+
+
+#Step 3 testing
+To test start the server by running and the navigate to localhost:5000 on your browser
+
+```
+(venv)$ ./run.py
+```
+To view the available files and their info go to localhost:5000/admin/files
+localhost:5000/admin is the dashboard
+localhost:5000/admin/settings - incomplete - meant to contain 
+        - configuration settings
+        - function to generate/regenerate the db
+        - function to start the server 
+        -function to generate a static website 
+
+#Step 4: Generate Static Website aka Freeze
+To get the static website run 
+```
+(venv)$ ./freeze.py
+```
+
+The static site is generated under app/build directory,move it to host or zip it for future use.
 
 ## Built With
 
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
+* Flask
+* Blitz DB
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Widi Oremo** - *Initial work* - [widioremo](https://github.com/widioremo)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
