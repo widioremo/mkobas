@@ -1,0 +1,28 @@
+{% extends "/site/default.html" %}
+
+{% block content %}
+
+{% if template == files %}
+    <ul>
+    {%for file in items%}
+
+    <li><a href="{{url_for('pdf', file_path='file.file_path')}}">12{{file.file_name}}</a>
+      <!--static/web/viewer.html?file=../{{file.file_path}}-->
+
+      {% endfor %}
+
+    </ul>
+
+
+{% else %}
+    <ul>
+    {%for cat in items%}
+
+    <li><a href="{{url_for('category', category_name=cat.cat_name)}}">{{cat.cat_name}}</a></li>
+
+      {% endfor %}
+
+    </ul>
+{% endif %}
+
+{% endblock %}

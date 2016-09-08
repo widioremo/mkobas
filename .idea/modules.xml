@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../blitzdb/.idea/blitzdb.iml" filepath="$PROJECT_DIR$/../blitzdb/.idea/blitzdb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../microblog/.idea/microblog.iml" filepath="$PROJECT_DIR$/../microblog/.idea/microblog.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pogba.iml" filepath="$PROJECT_DIR$/.idea/pogba.iml" />
     </modules>
   </component>

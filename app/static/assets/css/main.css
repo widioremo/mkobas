@@ -1,0 +1,221 @@
+
+
+.dark-grey-bg{
+  background-color:#3d3d3e;
+}
+
+
+
+
+
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   START : MAIN LAYOUT
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.dashboard {
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  width: 100%;
+  -webkit-transition: -webkit-transform 500ms ease;
+  -moz-transition: -moz-transform 500ms ease;
+  -ms-transition: -ms-transform 500ms ease;
+  -o-transition: -o-transform 500ms ease;
+  transition: transform 500ms ease;
+}
+
+.thin-panel {
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  width: 260px;
+
+}
+
+.thin-panel .logo {
+  background-color: #fff;
+  padding: 15px 0 0 15px;
+}
+
+.thin-panel .logo a img {
+  padding-left: 5px;
+  width: 120px;
+  height:auto;
+}
+.thin-panel .logo a:hover {
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+
+/*----MAIN MENU/NAV----*/
+
+nav { 
+ margin-top: 10px;
+}
+nav > ul {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px 0 1rem 0;
+  padding: 0px;
+  color: #fff;
+}
+nav > ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 12px;
+}
+
+
+nav > ul li a {
+  color: #fff;
+  display: block;
+  cursor: pointer;
+  padding: 15px 20px 15px 20px;
+  border-left: 3px solid transparent;
+  border-bottom: #555 solid 1px;
+}
+
+nav > ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid transparent;
+   color: #fcd432;
+   text-decoration: none;
+}
+
+
+
+nav > ul li.active > a {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid #fcd432;
+}
+
+
+
+
+#parent_nav ul{
+	display: none;
+}
+
+
+
+/*---PAGE CONTENT---*/
+
+.wide-panel {
+  width: auto;
+  margin-left: 260px;
+  min-height: 1040px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0 20px 85px 20px;
+  background-color:#f1f3f6;
+  /*background-color:#fdd431;*/
+  -webkit-border-radius: 0px 0px 0px 5px;
+  -moz-border-radius: 0px 0px 0px 5px;
+  border-radius: 0px 0px 0px 5px;
+  position: relative;
+  border-left: 1px solid #e4e5e7;
+}
+
+.wide-panel header {
+  height: 60px;
+  background-color: #fff;
+  font-size: 12px;
+  margin: 0 -20px 15px -20px;
+  padding: 15px 30px 0 20px; 
+}
+
+.white-panel .panel-heading{
+  background-color: #fdd431;
+}
+
+.main-panel{
+  margin-top: 15px;
+}
+
+.main-panel h1{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.main-panel ol{
+  padding-left: 0;
+}
+.main-panel li{
+  list-style-type: none;
+  padding: 15px 0;
+  border-bottom: 1px solid #e4e5e7;
+  counter-increment: step-counter;
+}
+
+.main-panel li::before {
+  content: counter(step-counter);
+  margin-right: 15px;
+  font-size: 80%;
+  background-color: #fdd431;
+  color: #3e3830;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   START : MEDIA QUERIES
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Define mobile styles */
+@media only screen and (max-width: 40em) {
+   .thin-panel {
+    min-height: 20px;
+    width: 100%;
+    position: relative;
+    background-color:#3d3d3e ;
+  }
+
+  .thin-panel .logo {
+    width: 60px;
+   padding: 15px 0 0 12px;
+  }
+  .wide-panel {
+    margin-left: 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    min-height: 500px;
+  }
+
+
+
+  
+}
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  
+
+  .thin-panel {
+    width: 150px;
+  }
+
+  .wide-panel {
+    margin-left: 150px;
+ }
+
+}
+
+
+
+
+

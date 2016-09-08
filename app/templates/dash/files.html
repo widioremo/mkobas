@@ -1,0 +1,35 @@
+{% extends "/dash/dash.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+<table class="table table-hover">
+    <tr><th>#</th>
+    <th>Screen Name</th>
+    <th>File Name</th>
+    <th>Category</th>
+    <th>Type</th>
+    <th>Path</th>
+
+    </tr>
+
+    <tbody>
+
+    {% for file in files%}
+    <tr>
+        <td></td>
+        <td>{{file.file_screen_name}}</td>
+        <td>{{file.file_name}}</td>
+        <td>{{file.file_category}}</td>
+        <td>{{file.file_type}}</td>
+        <td>{{file.file_path}}</td>
+    </tr>
+
+    {% endfor %}
+    </tbody>>
+    </table>
+
+    </div>
+    </div>
+
+{% endblock %}

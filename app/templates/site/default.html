@@ -1,0 +1,68 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}This is an example page{% endblock %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='assets/css/font-awesome.css')}}">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='assets/css/bootstrap.min.css')}}">
+
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='assets/css/video-css.css')}}">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='assets/videojs/video-js.min.css')}}">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='assets/css/bootstrap.min.css')}}">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='assets/css/main.css')}}">
+{% endblock %}
+
+{% block body%}
+
+
+ <body class="dark-grey-bg">
+        <div  id="dash_wrapper" class="dashboard">
+            <div class="thin-panel">
+                <div class="logo">
+                    <!--<a href="index.html"><img src="/assets/images/logo.jpeg" > </a>-->
+                </div>
+
+     </div> <!-- end thin-panel -->
+              <div class="wide-panel">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default white-panel main-panel ">
+                           {% block page_header%}
+<div class="panel-heading">
+                              <h1>{{page_title}}</h1>
+                            </div>
+
+{% endblock %}
+
+
+                            <div class="panel-body clearfix">
+{% block content %}
+
+
+{% endblock %}
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end wide-panel -->
+
+        </div><!-- end Dashboard -->
+{% endblock %}
+{% block scripts %}
+<script src="{{url_for('.static', filename='assets/js/bootstrap.min.js')}}"></script>
+<script src="{{url_for('.static', filename='assets/js/jquery-1.9.1.min.js')}}"></script>
+<script src="{{url_for('.static', filename='web/viewer.js')}}"></script>
+<script src="{{url_for('.static', filename='build/pdf.js')}}"></script>
+
+
+
+{{super()}}
+{% endblock %}

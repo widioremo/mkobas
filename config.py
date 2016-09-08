@@ -1,0 +1,1 @@
+BLITZDB_DATABASE = './file_db'

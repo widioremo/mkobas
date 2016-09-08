@@ -1,0 +1,24 @@
+{% extends "/dash/dash.html" %}
+
+{% block content %}
+<table class="table table-hover">
+    <tr><th>#</th>
+    <th>Screen Name</th>
+    <th>Category Name</th>
+    <th>Category Path</th>
+    <th>Category Slug</th>
+
+
+    </tr>
+
+    {% for category in cat%}
+    <tr>
+        <td></td>
+        <td>{{category.cat_screen_name}}</td>
+        <td>{{category.cat_name}}</td>
+        <td>{{category.cat_path}}</td>
+        <td>{{category.cat_slug}}</td>
+    </tr>
+
+    {% endfor %}
+{% endblock %}

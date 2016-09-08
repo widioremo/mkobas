@@ -1,0 +1,17 @@
+{% extends "/site/default.html" %}
+
+
+
+{% block content %}
+<div class="post-content col-md-12" itemprop="articleBody">
+        <div>
+            <div class="row" id= "video_post">
+                <video  id="video" height="320" controls preoload='auto' poster="media/teded.jpg" controls>
+                    <source src="{{url_for('static', filename='files/'+file_path)}}" >
+                </video>
+            </div>
+        </div>
+    <br />
+</div>
+
+{% endblock %}

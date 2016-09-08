@@ -1,0 +1,26 @@
+{% extends '/site/default.html' %}
+{% block page_header%}
+<div class="panel-heading">
+                              <h1>{{page_header}}</h1>
+                            </div>
+
+{% endblock %}
+{% block content%}
+<div>
+<ul>
+{% for file in files %}
+
+
+        {% if file.file_type == '.pdf' %}
+
+    <li><a href="/static/web/viewer.html?file=../files/{{file.file_path}}">{{file.file_name}}</a></li>
+
+        {% elif file.file_type == '.mp4' %}
+             <li><a href="{{url_for('video', file_name=file.file_name, file_path=file.file_path)}}">{{file.file_name}}</a></li>
+        {% endif %}
+
+    {% endfor %}
+    </ul>
+
+    </div>
+{% endblock %}
