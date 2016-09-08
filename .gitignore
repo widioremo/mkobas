@@ -1,4 +1,4 @@
 app/static/files/**/*
 file_db/**/*
 app/build/**/*
-venv
+venv/**/*
