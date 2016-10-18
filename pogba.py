@@ -97,13 +97,19 @@ class DirBrowser():
         print(dirItems)
 
         for item in dirItems:
+            print('ITEM')
+            print(item)
+            item = item.decode('utf-8').encode('utf-8')
+
             itemPath = os.path.join(path,item)
+
             if os.path.isdir(itemPath):
 
                 print("Dir Found")
                 category = CategoryItem()
                 category.cat_name = item
                 category.cat_path = itemPath
+                print(item)
                 category.cat_screen_name = item
 
                 category.save_cat()
