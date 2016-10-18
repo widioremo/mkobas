@@ -68,7 +68,7 @@ Check if a directory called file_db exists, this is is the file based database.
 If it does NOT exist run the command below to generate it
 
 ```
-(venv)$ ./filedb.py
+(venv)$ python ./filedb.py
 
 ```
 ######NOTE for now there is no auto mated way of updating the db after adding static files to the appstatic/files dir, the best solution is to delete the file_db directory and regenerate it by running the command above
@@ -78,7 +78,7 @@ If it does NOT exist run the command below to generate it
 To test start the server by running and the navigate to localhost:5000 on your browser
 
 ```
-(venv)$ ./run.py
+(venv)$ python ./run.py
 ```
 To view the available files and their info go to localhost:5000/admin/files
 localhost:5000/admin is the dashboard
@@ -91,7 +91,7 @@ localhost:5000/admin/settings - incomplete - meant to contain
 ####Step 4: Generate Static Website aka Freeze
 To get the static website run 
 ```
-(venv)$ ./freeze.py
+(venv)$ python ./freeze.py
 ```
 
 The static site is generated under app/build directory,move it to host or zip it for future use.
