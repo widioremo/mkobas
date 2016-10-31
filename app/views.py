@@ -4,7 +4,7 @@ from app import model
 from app import app
 
 @app.route('/')
-@app.route('/index')
+@app.route('/index/')
 def index():
     items = model.get_categories()
     length = items.__len__()
@@ -43,17 +43,17 @@ def pdf(file_path):
 
 
 
-@app.route('/admin')
+@app.route('/admin/')
 def admin():
     return render_template('/dash/dash.html')
 
-@app.route('/admin/files')
+@app.route('/admin/files/')
 def files():
     #render datatable with all files in db, might want to add pagination
     files = model.get_all_files()
     return render_template('/dash/files.html', files=files)
 
-@app.route('/admin/categories')
+@app.route('/admin/categories/')
 def categories():
     cat = model.get_categories()
     return render_template('/dash/categories.html', cat=cat)
